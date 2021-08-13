@@ -11,4 +11,7 @@
 # Doubly Linked List
 
 ___
-> Classes
+# Classes
+- `Main`
+- `MyNode`
+- `MyDoubleLinkedList`
