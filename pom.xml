@@ -8,6 +8,23 @@
     <artifactId>Konf_B20_Causevic_ListAlgorithm</artifactId>
     <version>1.0-SNAPSHOT</version>
 
+    <name>Konf_B20_Causevic_ListAlgorithm</name>
+    <url>https://github.com/alenCampus/Konf_B20_Causevic_ListAlgorithm.git
+    </url>
+
+    <developers>
+        <developer>
+            <id>alenCampus</id>
+            <name>Alen Causevic</name>
+            <email>a.causevic@edu.campus02.at</email>
+            <organization>FH Campus 02</organization>
+            <roles>
+                <role>Student</role>
+            </roles>
+            <timezone>Europe/Vienna</timezone>
+        </developer>
+    </developers>
+
     <properties>
         <maven.compiler.source>16</maven.compiler.source>
         <maven.compiler.target>16</maven.compiler.target>
