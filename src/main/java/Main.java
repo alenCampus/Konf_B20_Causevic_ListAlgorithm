@@ -25,5 +25,8 @@ public class Main {
         //-- Analyse the List
     myList.analyseList(myList);
 
+    //-- Printing List Reversed
+        myList.printListReversed(myList);
+
     }
 }

@@ -111,4 +111,43 @@ public class MyDoubleLinkedList {
         }
     }
 
+    // + New Method
+    // Branch -> addingMethod
+    public void printListReversed (MyDoubleLinkedList list){
+    /*
+    Explanation
+    - Here the list gets printed out but in the opposite direction.
+    - Means, that the first Element in the List has to be the last Element from the list
+    -- Before: | NULL <-> 10 <-> 20 <-> 30 <-> NULL |
+    -- After : | NULL <-> 30 <-> 20 <-> 10 <-> NULL |
+    - To be able to do that , a new Node has to be created with a reference to the starting point of the list. [root]
+       The new Node will be changing his position (reference) everytime the pointer comes to an end. [ value <-> NULL]
+     */
+        MyNode tailNode = list.root;   // Creating a new Node referenced to first Node
+        if (list == null){
+            System.out.println("The list ist empty!");
+        }else {
+
+                while (tailNode.nextPointer != null){ // checking if the pointer from the new Node has a value
+                        tailNode = tailNode.nextPointer;  // -> move the new Node to the next Position of the list and check again.
+                }
+
+            //Printing the values from the new reference Node --> tailNode.value
+            if(tailNode.nextPointer == null){
+                    System.out.print("Printing List Reversed: | NULL <-> ");
+                    while (tailNode.previousPointer != null){
+                        System.out.print(tailNode.value +" <-> ");
+                        tailNode = tailNode.previousPointer; //
+                    }
+                    /*
+                    - Because the condition is true that the Previous Pointer from tailNode is null then
+                      the last Value of the list will not get printed out.
+                    - That`s why the last value has to be printed out specifically
+                     */
+                System.out.println(tailNode.value + " <-> NULL"); // the Last of the new Node --> 10
+                }
+        }
+        System.out.println("-".repeat(10));
+    }
+
 }
