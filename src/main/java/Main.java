@@ -28,5 +28,7 @@ public class Main {
     //-- Printing List Reversed
         myList.printListReversed(myList);
 
+    //-- Printing the List but backwards
+        myList.printReversedList(myList);
     }
 }
