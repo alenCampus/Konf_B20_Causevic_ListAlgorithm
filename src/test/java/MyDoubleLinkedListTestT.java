@@ -16,6 +16,8 @@ public class MyDoubleLinkedListTestT {
         l.addValue(l,10); // root --> 10
         l.addValue(l,20); // Node --> 20
         l.addValue(l,30); // tail --> 30
+
+        l.printList(l);
         //Verify Phase
         assertEquals("The first element of the list is 10.",l.root.value,10);
     }

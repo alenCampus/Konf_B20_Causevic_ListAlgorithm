@@ -8,7 +8,7 @@ public class MyDoubleLinkedList {
         * - analyseList
         * - printListReversed
         * - addValue
-        * - removeValue
+        * - remove
      */
     //-- Instancevariable --
     /**
@@ -190,4 +190,71 @@ public class MyDoubleLinkedList {
         }
     }
 
+    public MyDoubleLinkedList remove(MyDoubleLinkedList list, int value){
+        /*
+        The Method "remove" deletes a value from the Double Linked List.
+        Representation:
+        -- Before : NULL <-> 10 <-> 20 <-> 30 <-> NULL
+                    remove(list, 20)
+        -- After : NULL <-> 10 <-> 30 <-> NULL
+        - The value (in our case 20) will be deleted from the list
+
+        Explanation:
+        - By deleting a Node a new Node has to be created.
+          This new Node will try to find the value needed by traversing through the list.
+        - Some issues has to be cleared by deleting a Node.
+        -- 1.) The searched Value is at the first position. [root]
+                --> if this happens then the position of the list has to be changed by the next followed value of the list
+        -- 2.) the searched Value is available and it is in the middle of the list
+                --> the referenced Value is going to be skipped by changing the [next]Pointer of the Node before him
+                    to the value after the referenced Value.
+                Before : 10 -> 20 -> 30  // deleting value 20
+                After  : 10 -  20 <-> 30 // 10 is pointing at 30
+         -- 3.) the searched Value is not available
+                 --> if this happens then the user gets a print-Statement "Value is not Available"
+                 Important : it has to be traversed through the whole list and checkecd if the pointer to the next Node is null.
+         -- 4.) The value is at the last Position of the list [tail]
+                 --> checking the condition if the [Next]Pointer is null
+                  ---> True: Change all value[s] of the Node to null
+         */
+
+        MyNode deleteNode = list.root;
+
+        if(deleteNode.value == value && deleteNode!= null) { // -- if the searched value is at the first Position [1]
+            System.out.println("Root Value gets deleted: " + value);
+            list.root = deleteNode.nextPointer;   // the root is changing it's position to the next value.
+            list.root.previousPointer = null;
+            return list;  // return the list
+
+        }else if (deleteNode.value != value && deleteNode.nextPointer != null){ // change the position of the new created Node.
+            deleteNode = deleteNode.nextPointer;
+            while (deleteNode != null && deleteNode.value != value){ // while the [Next]pointer of the new Node has a value than traverse through the list and change the position.
+                deleteNode = deleteNode.nextPointer; // changing the position of the new Node
+            }
+
+            // Print Statement if the value is available or not. [3]
+            if (deleteNode == null){
+                System.out.println("Value is not Available.");
+                return list;
+            }else {
+                System.out.println("Value is available --> " + deleteNode.value);
+            }
+        }
+
+
+        // Changing the Node if the value could have been found in the list. [4]
+        if(deleteNode != null && deleteNode.nextPointer == null && deleteNode.value == value){
+            deleteNode.previousPointer.nextPointer = null;
+            deleteNode.nextPointer = null;
+            deleteNode.previousPointer = null;
+            //[2]
+        }else if (deleteNode != null && deleteNode.nextPointer != null && deleteNode.value == value){
+            deleteNode.previousPointer.nextPointer = deleteNode.nextPointer;
+            deleteNode.nextPointer.previousPointer = deleteNode.previousPointer;
+            deleteNode.nextPointer = null;
+            deleteNode.previousPointer = null;
+        }
+        return list;
+
+    }
 }

@@ -30,5 +30,9 @@ public class Main {
 
     //-- Printing the List but backwards
         myList.printReversedList(myList);
+
+    //-- Deleting a value from the List
+    myList.remove(myList,30);
+    myList.printList(myList);
     }
 }
