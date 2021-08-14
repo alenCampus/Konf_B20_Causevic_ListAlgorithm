@@ -111,4 +111,41 @@ public class MyDoubleLinkedList {
         }
     }
 
+    // new Method - print Reversed List
+    public void printReversedList (MyDoubleLinkedList list){
+    /*
+    The Method "printReversedList" prints the Values of the list but in the opposite direction.
+    - The first value is going to ne at the last Position of the list.
+    - The last Value is going to be at the first position of the list.
+     */
+        MyNode printNodeReversed = list.root;
+
+        if(list == null){
+            System.out.println("The list is empty!");
+        }else {
+            /*
+            First we have to travel to the last Node of the list.
+            - The while loop helps us to change the position of our
+              new created Node.
+              It changes the position until the next Pointer does not have a value. [NULL]
+              This time we go forward with our Node.
+             */
+            while (printNodeReversed.nextPointer != null){
+                printNodeReversed = printNodeReversed.nextPointer;
+            }
+            if(printNodeReversed.nextPointer == null){
+                System.out.print("Doubly Linked List Reversed: |NULL <-> ");
+                /*
+                Now the second while-loop is traversing through the last but backwards.
+                - Changing the position of the new Node but backwards.
+                 */
+                while (printNodeReversed.previousPointer != null){
+                    System.out.print(printNodeReversed.value + " <-> ");
+                    printNodeReversed = printNodeReversed.previousPointer;
+                }
+                System.out.println(list.root.value + " <-> NULL|");
+            }
+            System.out.println("-".repeat(10));
+        }
+    }
 }
