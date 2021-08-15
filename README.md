@@ -30,20 +30,17 @@ It Conatains following values:
 - Pointer to the next Value of the list.
 
 A Doubly Linked List knows the has a link from the previous Node and a link to next Node of the list. 
-___
+
 ___
 # Classes
 - `Main`
 - `MyNode`
 - `MyDoubleLinkedList`
 
-
 ## Classes for Junit Tests ##
 - `MyDoubleLinkedListTestT`
 - `testMethodRemove`
 
-___
-___
 
 # Branches
  -  Every Branch represents a new feature created in the Main or in the MyDoublyLinked List Class. These Branches will be merged with the main Branch.
@@ -64,3 +61,34 @@ These Branches are created to change and initialize new Test-Cases for the "MyDo
 Naming Conventions: test-Method-[Name of Method]
 - `testMyDoublyLinkedList`
 - `test-Method-remove`
+___
+
+# JavaDoc comments
+
+- Every Method has a explenation with a "Regular multiple line comment". These comments are going to have a smal number in which the user can find out how the Method uses New Node.
+
+```Java
+public class MyDoublyLinkedList{
+
+public void addVallue (MyDoublyLinkedList list, int value){
+ /*
+    Regular multiple line comment 
+ */
+}
+}
+```
+
+```Java
+public void methodName(int value){
+ /*
+    Explenation:  
+     - [1] INDEX
+     - [2] INDEX
+    Representation: NULL <-> value <-> NULL
+ */
+}
+```
+
+___
+
+
