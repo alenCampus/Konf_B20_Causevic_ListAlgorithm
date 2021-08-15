@@ -17,7 +17,7 @@ public class testMethodRemove {
         list.addValue(list,30); //Tail
 
         list.remove(list,10);
-        // After deleting 20 should be the new root positon
+        // After deleting --> 20 should be the new root positon
         // 20 Root
         // 30 Tail
         assertEquals("Root removed and changed positon.",list.root.value,20);
