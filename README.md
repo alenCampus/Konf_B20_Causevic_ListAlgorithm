@@ -58,6 +58,16 @@ These Branches initialize new Methods in "MyDoublyLinkedList.class". To be sure 
 
 ---
 
+
+> Branches -> JUnit Tests
+
+These Branches are created to change and initialize new Test-Cases for the "MyDoublyLinkedList.class". Each Branch represents a java class which tests the Methods used in "MyDOublyLinkedList.java".
+Naming Conventions: test-Method-[Name of Method]
+- `testMyDoublyLinkedList`
+- `test-Method-remove`
+___
+
+
 # Main Class 
 
  The Main Class is printing all the values of the linked List. 
@@ -78,15 +88,6 @@ public static void main(String[] args) {
 }
 }
 ```
-___
-
-
-> Branches -> JUnit Tests
-
-These Branches are created to change and initialize new Test-Cases for the "MyDoublyLinkedList.class". Each Branch represents a java class which tests the Methods used in "MyDOublyLinkedList.java".
-Naming Conventions: test-Method-[Name of Method]
-- `testMyDoublyLinkedList`
-- `test-Method-remove`
 ___
 
 # JavaDoc comments
