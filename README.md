@@ -34,8 +34,11 @@ A Doubly Linked List knows the has a link from the previous Node and a link to n
 ___
 # Classes
 - `Main`
+    - Printing the values of the list 
 - `MyNode`
+    - Creates a Node and implements the structure
 - `MyDoubleLinkedList`
+    - All methods to add and remove values 
 
 ## Classes for Junit Tests ##
 - `MyDoubleLinkedListTestT`
