@@ -30,12 +30,20 @@ It Conatains following values:
 - Pointer to the next Value of the list.
 
 A Doubly Linked List knows the has a link from the previous Node and a link to next Node of the list. 
-
+___
 ___
 # Classes
 - `Main`
 - `MyNode`
 - `MyDoubleLinkedList`
+
+
+## Classes for Junit Tests ##
+- `MyDoubleLinkedListTestT`
+- `testMethodRemove`
+
+___
+___
 
 # Branches
  -  Every Branch represents a new feature created in the Main or in the MyDoublyLinked List Class. These Branches will be merged with the main Branch.
