@@ -58,6 +58,29 @@ These Branches initialize new Methods in "MyDoublyLinkedList.class". To be sure 
 
 ---
 
+# Main Class 
+
+ The Main Class is printing all the values of the linked List. 
+ It uses the Methods which was created in MyDoubleLinkedList.
+ The list is called "myList". 
+ Each printing statement will have a commentary which explains what will happen to the list. 
+ 
+```Java
+public class Main {
+public static void main(String[] args) {
+    MyDoubleLinkedList myList = new MyDoubleLinkedList();
+
+    // -- printing list 
+    myList.printValues(myList);
+
+    // -- adding Values to the list 
+    myList.addValues(myList,10);
+}
+}
+```
+___
+
+
 > Branches -> JUnit Tests
 
 These Branches are created to change and initialize new Test-Cases for the "MyDoublyLinkedList.class". Each Branch represents a java class which tests the Methods used in "MyDOublyLinkedList.java".
