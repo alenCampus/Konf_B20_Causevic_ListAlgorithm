@@ -4,14 +4,9 @@
 - Alen Causevic
 
 ## Introduction 
- Welcome to my repository. This repository was created and designed by me. Here I am going to use and explain how i implemented the Algorithm "Doubly Linked List". Before we get  started with the Code Implementation, I would like to give a small "Crashcourse"  about the differences of "Single Linked List" and "Doubly Linked List".
+ Welcome to the branch of --> "adding-Method-printReversedList".
+ This branch initailized the new Method of printListReversed. 
+
+## Issues
+ The branch had some issues while creating it.
  
-# Linked List 
-
-# Doubly Linked List
-
-___
-# Classes
-- `Main`
-- `MyNode`
-- `MyDoubleLinkedList`
