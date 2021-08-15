@@ -36,3 +36,23 @@ ___
 - `Main`
 - `MyNode`
 - `MyDoubleLinkedList`
+
+# Branches
+ -  Every Branch represents a new feature created in the Main or in the MyDoublyLinked List Class. These Branches will be merged with the main Branch.
+
+> Branches -> MyDoublyLinkedList.class
+
+These Branches initialize new Methods in "MyDoublyLinkedList.class". To be sure what kind of changes the class gets and eventually will be merged with the main-branch, the names of the class beggins with adding-Method-[name of Method]. 
+
+- `adding-Method-printReversedList`
+- `adding-Method-remove`
+- `adding-Methods`
+
+---
+
+> Branches -> JUnit Tests
+
+These Branches are created to change and initialize new Test-Cases for the "MyDoublyLinkedList.class". Each Branch represents a java class which tests the Methods used in "MyDOublyLinkedList.java".
+Naming Conventions: test-Method-[Name of Method]
+- `testMyDoublyLinkedList`
+- `test-Method-remove`
