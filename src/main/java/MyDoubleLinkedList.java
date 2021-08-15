@@ -27,19 +27,39 @@ public class MyDoubleLinkedList {
 
     //-- Methods
     public MyDoubleLinkedList addValue(MyDoubleLinkedList list, int value){
+        /*
+        This Method insert new values to the list.
+        - Before a new value is goint to be added, there has to be a check condition if the list is empty.
+         -- [1] Before adding new values in the list a new Node has to be created from the "MyNode.class".
+
+         -- [2] If the list does not have any values, then the first Node of the list [root] is going to get the value from the new Created Node.
+
+         -- [3] The first Node [root] is not empty, then move the new Created Node which has a reference to the root-Node to the next position.
+                Until the pointer of the reference shows to NULL.
+
+         -- [4] In the end change the [Next]Pointer of the referenceNode to the new addedNode
+                Common Mistake: Since it is a Doubly Linked List, the pointer of the Previous has to added and mentioned.
+         */
+        
+        // [1]
         MyNode addingNode = new MyNode(value); // Here a new Node is Created with the value
+
         /**
          * if the first Value of the List is NULL then change the Reference
          * root to the new created Node.
+         *
          */
+
+        // [2]
         if(list.root == null){
             list.root = addingNode;
         }else {
+            // [3]
             MyNode referenceNode = list.root; // Only points to the first Value and starts from there
             while (referenceNode.nextPointer != null){
                 referenceNode = referenceNode.nextPointer;
             }
-
+            // [4]
             referenceNode.nextPointer = addingNode; // the new Node gets his new NEXTPOINTER
             addingNode.previousPointer = referenceNode;
         }
